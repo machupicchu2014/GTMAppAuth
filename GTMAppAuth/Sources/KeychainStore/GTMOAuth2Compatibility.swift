@@ -197,7 +197,8 @@ public final class GTMOAuth2Compatibility: NSObject {
       scope: persistenceDictionary[oauth2ScopeKey],
       refreshToken: persistenceDictionary[oauth2RefreshTokenKey],
       codeVerifier: nil,
-      additionalParameters: additionalParameters
+      additionalParameters: additionalParameters,
+      additionalHeaders: nil
     )
     let tokenResponse = OIDTokenResponse(
       request: tokenRequest,

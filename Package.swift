@@ -1,4 +1,4 @@
-// swift-tools-version:5.1
+// swift-tools-version:5.9
 // The swift-tools-version declares the minimum version of Swift required to build this package.
 
 // Copyright 2021 Google LLC
@@ -23,7 +23,8 @@ let package = Package(
     .macOS(.v10_12),
     .iOS(.v10),
     .tvOS(.v10),
-    .watchOS(.v6)
+    .watchOS(.v6),
+    .visionOS(.v1)
   ],
   products: [
     .library(
@@ -33,7 +34,7 @@ let package = Package(
   ],
   dependencies: [
     .package(url: "https://github.com/google/gtm-session-fetcher.git", "2.1.0" ..< "4.0.0"),
-    .package(url: "https://github.com/openid/AppAuth-iOS.git", "1.6.0" ..< "2.0.0")
+    .package(url: "https://github.com/machupicchu2014/AppAuth-iOS", revision: "f4f51a9"),
   ],
   targets: [
     .target(
